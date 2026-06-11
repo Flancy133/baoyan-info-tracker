@@ -11,7 +11,7 @@ curl -fsSL https://raw.githubusercontent.com/Flancy133/baoyan-info-tracker/main/
 安装后可这样使用：
 
 ```text
-用 $baoyan-info-tracker 帮我整理新传保研院校。
+用 $baoyan-info-tracker 帮我整理目标专业的保研院校，并按我的背景分成冲、稳、保三档。
 ```
 
 ## 适合做什么

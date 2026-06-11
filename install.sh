@@ -24,4 +24,4 @@ rm -rf "$INSTALL_DIR"
 cp -R "$TMP_DIR/repo/skills/$SKILL_NAME" "$INSTALL_DIR"
 
 echo "Installed $SKILL_NAME to $INSTALL_DIR"
-echo "Try: 用 \$baoyan-info-tracker 帮我整理新传保研院校。"
+echo "Try: 用 \$baoyan-info-tracker 帮我整理目标专业的保研院校，并按我的背景分成冲、稳、保三档。"
