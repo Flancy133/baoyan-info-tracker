@@ -2,10 +2,36 @@
 
 一个温柔陪伴式的保研/推免资讯追踪 skill，用于检索官方来源、整理院校表格、识别夏令营/预推免/九推信息，并基于数据给出全面建议。
 
-## 一条命令安装
+## 安装方式
+
+### Codex / 默认安装
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Flancy133/baoyan-info-tracker/main/install.sh | bash
+```
+
+会安装到：
+
+```text
+~/.codex/skills/baoyan-info-tracker
+```
+
+### Claude Code
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Flancy133/baoyan-info-tracker/main/install.sh | env TARGET=claude bash
+```
+
+会安装到：
+
+```text
+~/.claude/skills/baoyan-info-tracker
+```
+
+### 自定义 skills 目录
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Flancy133/baoyan-info-tracker/main/install.sh | env TARGET=custom SKILLS_DIR="/path/to/skills" bash
 ```
 
 安装后可这样使用：
@@ -33,6 +59,22 @@ skills/baoyan-info-tracker/baoyan-info-tracker-single.md
 ```
 
 把它粘贴到 Claude、Kimi、Coze、通义、文心等平台的智能体指令里即可。
+
+## 关于 RedSkill
+
+这个仓库目前是 GitHub 安装方式，不是 RedSkill 商店安装方式。
+
+只有当 skill 上架到 RedSkill 并获得 identifier 后，才可以使用：
+
+```bash
+redskill install <identifier>
+```
+
+如果之后上架到 RedSkill，可以把安装话术改成：
+
+```text
+现在为你安装 baoyan-info-tracker 技能。请先根据 https://redskill.xiaohongshu.net/install.md 安装 RedSkill 商店；若已安装，则直接执行 redskill install baoyan-info-tracker。
+```
 
 ## 本地生成表格模板
 
