@@ -47,6 +47,7 @@ curl -fsSL https://raw.githubusercontent.com/Flancy133/baoyan-info-tracker/main/
 - 记录夏令营、预推免、九推时间
 - 判断夏令营 offer 效力
 - 支持上传/粘贴简历或个人材料，先解析用户画像，再做冲稳保分档
+- 支持用交互式 HTML 页面收集第一轮信息，并导出 JSON/Markdown
 - 记录个人报名、入营、参营、offer、面试、九推确认状态
 - 标注往届信息，提醒用户不能把历史公告当作目标年份结论
 - 主动询问是否设置每日/每周定时任务
@@ -95,6 +96,7 @@ python skills/baoyan-info-tracker/scripts/create_tracker_template.py --format cs
 skills/baoyan-info-tracker/
 ├── SKILL.md
 ├── agents/openai.yaml
+├── assets/intake-form.html
 ├── baoyan-info-tracker-single.md
 ├── references/
 │   ├── intake-gate.md

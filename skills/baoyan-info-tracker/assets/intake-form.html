@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>保研资讯追踪 - 基础信息收集</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --panel: #ffffff;
+      --ink: #222222;
+      --muted: #666666;
+      --line: #deded8;
+      --accent: #2f6f68;
+      --accent-soft: #e4f1ef;
+      --warn: #8a5a12;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    main {
+      width: min(1040px, calc(100% - 32px));
+      margin: 28px auto 48px;
+    }
+    header {
+      margin-bottom: 22px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+    form {
+      display: grid;
+      gap: 16px;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    h2 {
+      font-size: 17px;
+      margin: 0 0 14px;
+      letter-spacing: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px 11px;
+      font: inherit;
+      color: var(--ink);
+      background: #fff;
+    }
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+    .full { grid-column: 1 / -1; }
+    .hint {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .primary {
+      color: #fff;
+      background: var(--accent);
+    }
+    .secondary {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .note {
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      padding: 12px;
+      border-radius: 6px;
+      color: var(--ink);
+    }
+    #output {
+      white-space: pre-wrap;
+      min-height: 120px;
+      background: #fcfcfb;
+    }
+    @media (max-width: 720px) {
+      main { width: min(100% - 20px, 1040px); margin-top: 18px; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 14px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>保研资讯追踪基础信息</h1>
+      <p>我们先把条件理清楚，再去查官方来源、建表和判断冲稳保。填不确定的地方可以先留空。</p>
+    </header>
+
+    <form id="intakeForm">
+      <section>
+        <h2>目标与范围</h2>
+        <div class="grid">
+          <label>目标年份/届次
+            <input name="目标年份" placeholder="例如：2027 届、2026 年夏令营">
+          </label>
+          <label>目标专业/方向
+            <input name="目标专业方向" placeholder="例如：计算机、法学、新闻传播、金融">
+          </label>
+          <label>任务类型
+            <select name="任务类型">
+              <option value="">请选择</option>
+              <option>单校查询</option>
+              <option>院校清单</option>
+              <option>个人申请追踪</option>
+              <option>每日/每周更新</option>
+            </select>
+          </label>
+          <label>目标学校
+            <input name="目标学校" placeholder="可留空，例如：复旦大学、南京大学">
+          </label>
+          <label>城市/地区偏好
+            <input name="地区偏好" placeholder="例如：北京、上海、江浙沪、全国">
+          </label>
+          <label>学校层次偏好
+            <input name="学校层次偏好" placeholder="例如：985、211、双一流、不限">
+          </label>
+          <label>学硕/专硕偏好
+            <select name="学硕专硕偏好">
+              <option>均可</option>
+              <option>学硕</option>
+              <option>专硕</option>
+            </select>
+          </label>
+          <label>学费/学制限制
+            <input name="学费学制限制" placeholder="例如：学费不超过 8 万、学制 2-3 年均可">
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <h2>用户画像</h2>
+        <div class="grid">
+          <label>简历/材料来源
+            <select name="简历材料来源">
+              <option>未提供</option>
+              <option>上传文件</option>
+              <option>粘贴文本</option>
+              <option>手填</option>
+            </select>
+          </label>
+          <label>本科院校层次
+            <select name="本科院校层次">
+              <option value="">请选择</option>
+              <option>985</option>
+              <option>211</option>
+              <option>双一流</option>
+              <option>双非</option>
+              <option>中外合作</option>
+              <option>其他</option>
+            </select>
+          </label>
+          <label>本科专业
+            <input name="本科专业" placeholder="例如：广告学、计算机科学与技术">
+          </label>
+          <label>排名/绩点
+            <input name="排名绩点" placeholder="例如：专业前 10%、GPA 3.8/4.0">
+          </label>
+          <label>英语水平
+            <input name="英语水平" placeholder="例如：六级 560、雅思 7.0">
+          </label>
+          <label>风险偏好
+            <select name="风险偏好">
+              <option>均衡</option>
+              <option>激进</option>
+              <option>稳妥</option>
+            </select>
+          </label>
+          <label class="full">科研/竞赛
+            <textarea name="科研竞赛" placeholder="可以写论文、课题、竞赛、获奖等"></textarea>
+          </label>
+          <label class="full">实习/论文/作品集
+            <textarea name="实习论文作品" placeholder="可以写实习、作品、项目、发表、实践经历等"></textarea>
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <h2>输出与提醒</h2>
+        <div class="grid">
+          <label>输出形式
+            <select name="输出形式">
+              <option>Markdown 表格</option>
+              <option>Excel/CSV</option>
+              <option>两者都要</option>
+            </select>
+          </label>
+          <label>是否记录个人申请进度
+            <select name="记录申请进度">
+              <option>是</option>
+              <option>否</option>
+              <option>暂不确定</option>
+            </select>
+          </label>
+          <label>定时任务频率
+            <select name="定时任务频率">
+              <option>不设置</option>
+              <option>每日</option>
+              <option>每周</option>
+              <option>手动更新</option>
+            </select>
+          </label>
+          <label>希望检查时间
+            <input name="检查时间" placeholder="例如：每天 09:00">
+          </label>
+          <label class="full">其他备注
+            <textarea name="备注" placeholder="还有任何你在意的限制，都可以写在这里"></textarea>
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <div class="note">点击生成后，把下面的 JSON 或 Markdown 复制给 agent，它就能继续查官方来源并建表。</div>
+        <div class="actions" style="margin-top: 14px;">
+          <button class="primary" type="button" id="makeJson">生成 JSON</button>
+          <button class="secondary" type="button" id="makeMarkdown">生成 Markdown</button>
+          <button class="secondary" type="button" id="copyOutput">复制结果</button>
+        </div>
+        <textarea id="output" readonly aria-label="输出结果"></textarea>
+      </section>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById("intakeForm");
+    const output = document.getElementById("output");
+
+    function data() {
+      return Object.fromEntries(new FormData(form).entries());
+    }
+
+    document.getElementById("makeJson").addEventListener("click", () => {
+      output.value = JSON.stringify(data(), null, 2);
+    });
+
+    document.getElementById("makeMarkdown").addEventListener("click", () => {
+      const rows = Object.entries(data()).map(([key, value]) => `| ${key} | ${value || "待补充"} |`);
+      output.value = ["| 字段 | 内容 |", "| --- | --- |", ...rows].join("\\n");
+    });
+
+    document.getElementById("copyOutput").addEventListener("click", async () => {
+      if (!output.value) return;
+      await navigator.clipboard.writeText(output.value);
+      const old = output.value;
+      output.value = "已复制。你可以把这段发给 agent 继续处理。\\n\\n" + old;
+    });
+  </script>
+</body>
+</html>

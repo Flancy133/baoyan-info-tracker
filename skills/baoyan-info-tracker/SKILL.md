@@ -34,6 +34,8 @@ description: 帮助用户检索、核验、追踪中国高校各专业保研/推
 
 先读 `references/intake-gate.md`，按其中规则判断是否可以开始执行。
 
+如果所在平台支持创建或打开本地 HTML 文件，可以使用 `assets/intake-form.html` 作为第一轮信息收集页面；让用户填写后复制 JSON/Markdown 回来。若平台不支持交互页面，则使用下方 Markdown 提问模板。
+
 这是强制入口。先判断用户是否已经提供足够信息：
 
 - 已提供目标专业/方向；
