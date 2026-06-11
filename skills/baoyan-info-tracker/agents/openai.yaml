@@ -1,7 +1,7 @@
 interface:
   display_name: "保研资讯追踪"
-  short_description: "检索官方推免资讯并维护申请追踪表"
-  default_prompt: "Use $baoyan-info-tracker to first collect my baoyan basics and background, then search official sources and build a tracker with 冲/稳/保 tiers."
+  short_description: "检索官方推免资讯，维护申请表、材料库和 Gap 清单"
+  default_prompt: "Use $baoyan-info-tracker to first collect my baoyan basics and background, then search official sources and build a tracker with 冲/稳/保 tiers, reusable materials, and a Gap 清单."
 
 policy:
   allow_implicit_invocation: true
