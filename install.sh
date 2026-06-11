@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SKILL_NAME="baoyan-info-tracker"
-REPO_URL="${REPO_URL:-https://github.com/OWNER/REPO.git}"
+REPO_URL="${REPO_URL:-https://github.com/Flancy133/baoyan-info-tracker.git}"
 CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 INSTALL_DIR="$CODEX_HOME/skills/$SKILL_NAME"
 TMP_DIR="$(mktemp -d)"
@@ -25,4 +25,3 @@ cp -R "$TMP_DIR/repo/skills/$SKILL_NAME" "$INSTALL_DIR"
 
 echo "Installed $SKILL_NAME to $INSTALL_DIR"
 echo "Try: 用 \$baoyan-info-tracker 帮我整理新传保研院校。"
-

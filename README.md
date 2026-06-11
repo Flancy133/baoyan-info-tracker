@@ -4,10 +4,8 @@
 
 ## 一条命令安装
 
-发布到 GitHub 后，把下面命令里的 `OWNER/REPO` 替换成实际仓库名：
-
 ```bash
-curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Flancy133/baoyan-info-tracker/main/install.sh | bash
 ```
 
 安装后可这样使用：
@@ -63,4 +61,3 @@ skills/baoyan-info-tracker/
 │   └── voice-guide.md
 └── scripts/create_tracker_template.py
 ```
-
